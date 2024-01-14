@@ -1159,6 +1159,10 @@ textarea {
         display: none;
     }
 
+    .timeContainer ul li p , .smallText{
+        font-size: 14px !important;
+    }
+
     .mobile {
         display: flex;
     }
