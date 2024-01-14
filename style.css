@@ -284,10 +284,10 @@ body {
 }
 
 .cover img {
-    position: relative !important;
+    position: absolute !important;
     top: 50% !important;
     left: 50% !important;
-    transform: translate(-45%, -50%);
+    transform: translate(-45%, -50%) !important;
     width: 700px;
     z-index: 10;
 }
@@ -1157,6 +1157,10 @@ textarea {
     .list,
     .listTitle {
         display: none;
+    }
+
+    .timeContainer ul li p , .smallText{
+        font-size: 14px !important;
     }
 
     .mobile {
