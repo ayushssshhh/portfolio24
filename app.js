@@ -2,7 +2,7 @@ const lenis = new Lenis()
 
 
 lenis.on('scroll', (e) => {
-  console.log(e)
+
 })
 
 function raf(time) {
@@ -31,6 +31,27 @@ gsap.to({}, 0.016, {
     })
   }
 });
+
+// project - ptab height
+// document.addEventListener("DOMContentLoaded", function() {
+//   var ptabs = document.querySelectorAll('.ptab');
+
+//   ptabs.forEach(function(ptab) {
+//       var pimg = ptab.querySelector('.pimg');
+
+//       // Ensure the image is fully loaded before setting the height
+//       pimg.onload = function() {
+//           ptab.style.height = pimg.offsetHeight + 'px';
+//       };
+
+//       // In case the image is already loaded (from cache)
+//       if (pimg.complete) {
+//           pimg.onload();
+//       }
+//   });
+// });
+
+
 
 window.addEventListener("mousemove", function (e) {
   mouseX = e.clientX;
@@ -142,7 +163,6 @@ let preLoader = document.querySelector(".preLoader");
 function startLoader() {
   let currentVal = 0;
   document.body.classList.add("remove-scrolling"); 
-
   function updateCounter() {
     if (currentVal === 100) {
       return;
@@ -190,8 +210,8 @@ gsap.to(".bar", 1.5, {
 
 // hero img
 
-gsap.to(".bio", {
-  scale: 1.2, stagger: 0.25, duration: .5,
+gsap.to("#main", {
+  scale: 1.5, stagger: 0.25, duration: .5,
   scrollTrigger: {
     trigger: ".two",
     start: 'top 100%',
@@ -248,13 +268,25 @@ timeList.forEach((p) => {
 
 // project
 gsap.to(".project", {
-  scale: 1.1, stagger: 0.25, duration: .5,
+  scale: 1, stagger: 0.25, duration: .5,
   scrollTrigger: {
     trigger: ".project",
     start: 'top 60%',
     end: 'top 20%',
     toggleActions: 'play play reverse reverse',
     // scrub : true
+  }
+});
+
+// splide
+gsap.to(".splide", {
+  opacity: 1 , scale : 1 , stagger: 0.25, duration: .5,
+  scrollTrigger: {
+    trigger: ".splide",
+    start: 'top 50%',
+    end: 'top 20%',
+    toggleActions: 'play play reverse reverse',
+    // markers : true
   }
 });
 
